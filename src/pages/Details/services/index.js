@@ -1,0 +1,5 @@
+export { getMovieDetails } from './getMovieDetails'
+export { getMovieVideos } from './getMovieVideos'
+export { getSerieDetails } from './getSerieDetails'
+export { getSerieVideos } from './getSerieVideos'
+export { getData } from './getData'
