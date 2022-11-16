@@ -14,12 +14,20 @@ export const Content = styled.div`
   gap: 1.6rem;
   padding: 3rem;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
+
+  @media screen and (min-width: 720px) {
+    font-size: 2rem;
+  }
 `
 
 export const Title = styled.h2`
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 700;
+
+  @media screen and (min-width: 720px) {
+    font-size: 6rem;
+  }
 `
 
 export const Top = styled.div`
@@ -40,7 +48,7 @@ export const TrailerButton = styled.button`
   letter-spacing: 1.8px;
   font-weight: 700;
   
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,6 +60,10 @@ export const TrailerButton = styled.button`
     background: rgba(255, 255, 255, 0.95);
     color: #000;
     border-color: #000;
+  }
+
+  @media screen and (min-width: 720px) {
+    padding: 1rem;
   }
 `
 
@@ -67,11 +79,19 @@ export const PlayButton = styled(TrailerButton)`
 
 export const WatchListButton = styled(TrailerButton)`
   height: 100%;
-  width: 6rem;
+  width: 5rem;
   text-align: center;
 
   i {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    width: 6rem;
+
+    i {
+      font-size: 3rem;
+    }
   }
 `
 
@@ -90,8 +110,13 @@ export const Bg = styled.div`
 export const Backdrop = styled.img`
   position: fixed;
   inset: 0;
+  top: var(--header-h);
   z-index: -1;
 
-  height: 100vh;
   object-fit: cover;
+
+  @media screen and (min-width: 720px) {
+    height: 100vh;
+    top: 0;
+  }
 `
