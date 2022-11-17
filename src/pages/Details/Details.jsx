@@ -1,31 +1,20 @@
-// Services
-import { getData } from './services'
+// Components
+import { Loading, Trailer } from '../../common/components'
+import * as S from './styles'
 
 // Hooks
 import { useFetch } from '../../common/hooks/useFetch'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
-// Components
-import { Loading, Trailer } from '../../common/components'
-import * as S from './styles'
+// Services
+import { getData } from './services'
 
-// Page
 export function Details () {
   const { id } = useParams()
   const { data, isLoading } = useFetch(() => getData(id))
 
   const [showModal, setShowModal] = useState(false)
-
-  const {
-    backdrop,
-    genres,
-    overview,
-    releaseDate,
-    runtime,
-    title,
-    videos
-  } = data
 
   if (isLoading) {
     return <Loading />
@@ -36,20 +25,20 @@ export function Details () {
       <S.Bg>
         <S.Container>
           <S.Content>
-            {title && <S.Title>{title}</S.Title>}
+            {data.title && <S.Title>{data.title}</S.Title>}
             <S.Top>
-              {releaseDate && <span>{releaseDate}</span>}
+              {data.releaseDate && <span>{data.releaseDate}</span>}
               {'  •  '}
-              {runtime && <span>{runtime} minutes</span>}
+              {data.runtime && <span>{data.runtime} minutes</span>}
               <S.TrailerButton onClick={() => setShowModal(!showModal)}>
                 <i className='fa-sharp fa-solid fa-play' />
                 <span>TRAILER</span>
               </S.TrailerButton>
             </S.Top>
-            {overview && <p>{overview}</p>}
+            {data.overview && <p>{data.overview}</p>}
             <span>
               {' • '}
-              {genres && genres.map((gen) => gen.name + ' • ')}
+              {data.genres && data.genres.map((gen) => gen.name + ' • ')}
             </span>
             <S.Bottom>
               <S.PlayButton>
@@ -62,13 +51,13 @@ export function Details () {
               </S.WatchListButton>
             </S.Bottom>
             <Trailer
-              videos={videos}
+              videos={data.videos}
               showModal={showModal}
               setShowModal={setShowModal}
             />
             <S.Backdrop
-              src={backdrop}
-              alt={title || id}
+              src={data.backdrop}
+              alt={data.title || data.id}
             />
           </S.Content>
         </S.Container>
