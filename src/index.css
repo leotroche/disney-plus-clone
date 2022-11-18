@@ -1,0 +1,147 @@
+/* Remove default margin and padding. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Use a more-intuitive box-sizing model. */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Set default headers font-size. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  font-weight: inherit;
+}
+
+/* Avoid text overflow. */
+p {
+  overflow-wrap: break-word;
+}
+
+/* Prevent media tag overflow. */
+img,
+svg,
+audio,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Form tags that inherit properties. */
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  display: block;
+  border: none;
+}
+
+/* Use anchors as boxes. */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+p a {
+  display: inline;
+}
+
+/* Remove default list style-type. */
+ol,
+ul {
+  list-style-type: none;
+}
+
+/* Set a smooth scroll. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Initial body settings. */
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+html,
+body {
+  min-width: 320px;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  /* max-width: 100vw; */
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size: 1.6rem; /* 16px */
+}
+
+/* #root {
+  width: 100%;
+} */
+
+/* --> * <-- */
+
+:root {
+  font-family: "Nunito", sans-serif;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #040814; */
+  background-color: #242424;
+  /* background-color: #121212; */
+
+  /* Variables: */
+  --black: #121212;
+  --black: #03040d;
+  --black: #181b28;
+  /* --black: #000; */
+  --purple: #6421ff;
+  --purple-hover: #6421ffde;
+  /**/
+
+  --red: #db0000;
+  --white: #ffffff;
+  --green: rgb(0, 120, 0);
+  --bg-black: #161616;
+
+  /* Breakpoints */
+  --bp-mobile: 480px;
+  --bp-tablet: 700px;
+  --bp-ordenador: 1328px;
+
+  /**/
+  --header-h: 7rem;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* * {
+  outline: 1px solid #f00 !important;
+} */
