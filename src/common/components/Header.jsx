@@ -23,7 +23,7 @@ export const SOCIAL_ICONS = [
   }
 ]
 
-const LOGO_SVG = '/public/img/logo.svg'
+const LOGO_SVG = '/img/logo.svg'
 
 export const Header = () => {
   const [headerBg, setHeaderBg] = useState(false)
