@@ -1,0 +1,7 @@
+export { Footer } from './Footer'
+export { Header } from './Header'
+export { Layout } from './Layout'
+export { Loading } from './Loading'
+export { MovieCarousel } from './MovieCarousel'
+export { Studios } from './Studios'
+export { Trailer } from './Trailer'
